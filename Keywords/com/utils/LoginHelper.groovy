@@ -20,48 +20,37 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
- class LoginHelper {
+class LoginHelper {
 
-    /**
-     * Open the Cura homepage using baseUrl from GlobalVariable
-     */
-    @Keyword
-    def openCuraHomePage() {
-        WebUI.comment("Opening Cura homepage: ${GlobalVariable.baseURL}")
-        WebUI.openBrowser('')
-        WebUI.maximizeWindow()
-        WebUI.navigateToUrl(GlobalVariable.baseURL)
-    }
+	@Keyword
+	def openCuraHomePage() {
+		WebUI.comment("Opening Cura homepage: ${GlobalVariable.baseURL}")
+		WebUI.openBrowser('')
+		WebUI.maximizeWindow()
+		WebUI.navigateToUrl(GlobalVariable.baseURL)
+	}
 
-    /**
-     * Perform login with provided username and encrypted password
-     */
-    @Keyword
-    def performLogin(String username, String encryptedPassword) {
-        WebUI.comment("Attempting to log in as: ${username}")
-        WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/i_CURA Healthcare_fa fa-bars'))
-        WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/a_Login'))
-        WebUI.setText(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Username_username'), username)
-        WebUI.setEncryptedText(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Password_password'), encryptedPassword)
-        WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/button_Login'))
-    }
 
-    /**
-     * Log out from the application
-     */
-    @Keyword
-    def logout() {
-        WebUI.comment("Logging out of Cura system")
-        WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/a_CURA Healthcare_menu-toggle'))
-        WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/a_Logout'))
-    }
+	@Keyword
+	def performLogin(String username, String encryptedPassword) {
+		WebUI.comment("Attempting to log in as: ${username}")
+		WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/i_CURA Healthcare_fa fa-bars'))
+		WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/a_Login'))
+		WebUI.setText(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Username_username'), username)
+		WebUI.setEncryptedText(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Password_password'), encryptedPassword)
+		WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/button_Login'))
+	}
 
-    /**
-     * Close the browser
-     */
-    @Keyword
-    def closeBrowser() {
-        WebUI.comment("Closing browser")
-        WebUI.closeBrowser()
-    }
+	@Keyword
+	def logout() {
+		WebUI.comment("Logging out of Cura system")
+		WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/a_CURA Healthcare_menu-toggle'))
+		WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/a_Logout'))
+	}
+
+	@Keyword
+	def closeBrowser() {
+		WebUI.comment("Closing browser")
+		WebUI.closeBrowser()
+	}
 }

@@ -22,66 +22,58 @@ import internal.GlobalVariable
 
 class AppointmentHelper {
 
-    @Keyword
-    def fillBasicAppointmentForm(String facilityValue, boolean readmission, String program, String visitDate, String comment) {
+	@Keyword
+	def fillBasicAppointmentForm(String facilityValue, boolean readmission, String program, String visitDate, String comment) {
 
-        // Select Facility by value
-        WebUI.selectOptionByValue(
-            findTestObject('Object Repository/Page_CURA Healthcare Service/select_Tokyo CURA Healthcare Center        _5b4107'), 
-            facilityValue, true)
 
-        // Readmission checkbox
-        if (readmission) {
-            WebUI.check(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Apply for hospital readmission_hospit_63901f'))
-        } else {
-            WebUI.uncheck(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Apply for hospital readmission_hospit_63901f'))
-        }
+		WebUI.selectOptionByValue(
+				findTestObject('Object Repository/Page_CURA Healthcare Service/select_Tokyo CURA Healthcare Center        _5b4107'),
+				facilityValue, true)
 
-        // Healthcare Program
-        switch(program.toLowerCase()) {
-            case 'medicare':
-                WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Medicare_programs'))
-                break
-            case 'medicaid':
-                WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Medicaid_programs'))
-                break
-            case 'none':
-                WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/input_None_programs'))
-                break
-            default:
-                throw new IllegalArgumentException("Unsupported program: ${program}")
-        }
 
-		// Set visit date
+		if (readmission) {
+			WebUI.check(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Apply for hospital readmission_hospit_63901f'))
+		} else {
+			WebUI.uncheck(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Apply for hospital readmission_hospit_63901f'))
+		}
+
+
+		switch(program.toLowerCase()) {
+			case 'medicare':
+				WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Medicare_programs'))
+				break
+			case 'medicaid':
+				WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Medicaid_programs'))
+				break
+			case 'none':
+				WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/input_None_programs'))
+				break
+			default:
+				throw new IllegalArgumentException("Unsupported program: ${program}")
+		}
+
 		WebUI.setText(findTestObject('Object Repository/Page_CURA Healthcare Service/input_Visit Date (Required)_visit_date'), visitDate)
-	
-		findTestObject('Object Repository/Page_CURA Healthcare Service/input_Visit Date (Required)_visit_date')
-		
-      // Set comment
-        WebUI.setText(findTestObject('Object Repository/Page_CURA Healthcare Service/textarea_Comment_comment'), comment)
 
-        // Submit form
-        WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/button_Book Appointment'))
-    }
-	
+		findTestObject('Object Repository/Page_CURA Healthcare Service/input_Visit Date (Required)_visit_date')
+
+
+		WebUI.setText(findTestObject('Object Repository/Page_CURA Healthcare Service/textarea_Comment_comment'), comment)
+
+		WebUI.click(findTestObject('Object Repository/Page_CURA Healthcare Service/button_Book Appointment'))
+	}
+
 	@Keyword
 	def verifyAppointmentConfirmation(String expectedFacility, String expectedProgram, String expectedDate, String expectedComment) {
-	
-		// Verify confirmation header is shown
+
+
 		WebUI.verifyElementText(findTestObject('Object Repository/Page_CURA Healthcare Service/h2_Appointment Confirmation'), 'Appointment Confirmation')
-	
-		// Confirm facility
+
 		WebUI.verifyElementText(findTestObject('Object Repository/Page_CURA Healthcare Service/p_Facility'), expectedFacility)
-	
-		// Confirm program (Program shows up as "Healthcare Program" text)
+
 		WebUI.verifyElementText(findTestObject('Object Repository/Page_CURA Healthcare Service/p_Program'), expectedProgram)
-	
-		// Confirm visit date
+
 		WebUI.verifyElementText(findTestObject('Object Repository/Page_CURA Healthcare Service/p_VisitDate'), expectedDate)
-	
-		// Confirm comment
+
 		WebUI.verifyElementText(findTestObject('Object Repository/Page_CURA Healthcare Service/p_Comment'), expectedComment)
 	}
-	
-	
 }
