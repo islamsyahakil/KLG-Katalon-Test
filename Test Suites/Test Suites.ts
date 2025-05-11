@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>Test Suites</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>3</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>true</rerunImmediately>
+   <testSuiteGuid>53eee556-7ef9-494a-a9e8-aade3e98261a</testSuiteGuid>
+   <testCaseLink>
+      <guid>6616edfa-affb-435d-8426-0ae79202a3c7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Login Successful</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1d634674-5db4-4247-a492-f7be7303c088</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Login Negative Cases</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>7524117b-489a-44ea-8b92-28c7d3fc71a1</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/LoginNegativeData</testDataId>
+      </testDataLink>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId>7524117b-489a-44ea-8b92-28c7d3fc71a1</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>username</value>
+         <variableId>6efbb1d8-846f-4d9f-9ae1-38f23f0eae41</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>7524117b-489a-44ea-8b92-28c7d3fc71a1</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>password</value>
+         <variableId>c28e2d46-7729-4718-accb-1577f11024e3</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>7524117b-489a-44ea-8b92-28c7d3fc71a1</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expectedMessage</value>
+         <variableId>7a40bfd5-5feb-4a11-a1d2-9f97be823cf2</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>091e2b93-4dac-4ca0-b13d-f1ed5e898e9d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Make Appointment</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>cf60a86e-48af-4254-a763-5dc7332a1497</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/AppointmentData</testDataId>
+      </testDataLink>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId>cf60a86e-48af-4254-a763-5dc7332a1497</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>facility</value>
+         <variableId>bbc5deaf-6373-42be-a653-3cd24a34f05e</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>cf60a86e-48af-4254-a763-5dc7332a1497</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>readmission</value>
+         <variableId>e726a95a-a84a-4325-b4f4-ccdd1c53b230</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>cf60a86e-48af-4254-a763-5dc7332a1497</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>program</value>
+         <variableId>8b8c3bd5-7a51-426d-bf08-45c7c39d62b9</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>cf60a86e-48af-4254-a763-5dc7332a1497</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>date</value>
+         <variableId>c569abe2-81fb-475b-b8a3-807f5be3469e</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>cf60a86e-48af-4254-a763-5dc7332a1497</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>comment</value>
+         <variableId>e49c0351-afce-4437-a080-c89fb337999a</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

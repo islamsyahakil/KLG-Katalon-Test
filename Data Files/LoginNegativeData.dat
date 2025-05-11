@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFileEntity>
+   <description></description>
+   <name>LoginNegativeData</name>
+   <tag></tag>
+   <connectionProperties/>
+   <containsHeaders>true</containsHeaders>
+   <csvSeperator></csvSeperator>
+   <dataFileGUID>dbedfff4-7302-4686-b8f0-d951e7fbf4dc</dataFileGUID>
+   <dataSourceUrl></dataSourceUrl>
+   <driver>InternalData</driver>
+   <data>wrongUsername correctPassword Login+failed%21+Please+ensure+the+username+and+password+are+valid.</data>
+   <data>correctUsername%09 wrongPassword Login+failed%21+Please+ensure+the+username+and+password+are+valid.</data>
+   <data>null correctPassword Login+failed%21+Please+ensure+the+username+and+password+are+valid.</data>
+   <data>correctUsername%09 null Login+failed%21+Please+ensure+the+username+and+password+are+valid.</data>
+   <data>null null Login+failed%21+Please+ensure+the+username+and+password+are+valid.</data>
+   <internalDataColumns>
+      <columnIndex>0</columnIndex>
+      <name>username</name>
+      <size>5</size>
+   </internalDataColumns>
+   <internalDataColumns>
+      <columnIndex>1</columnIndex>
+      <name>password</name>
+      <size>5</size>
+   </internalDataColumns>
+   <internalDataColumns>
+      <columnIndex>2</columnIndex>
+      <name>expectedMessage</name>
+      <size>5</size>
+   </internalDataColumns>
+   <isInternalPath>false</isInternalPath>
+   <query></query>
+   <secureUserAccount>false</secureUserAccount>
+   <sheetName></sheetName>
+   <usingGlobalDBSetting>false</usingGlobalDBSetting>
+</DataFileEntity>

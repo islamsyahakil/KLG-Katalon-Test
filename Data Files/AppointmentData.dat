@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFileEntity>
+   <description></description>
+   <name>AppointmentData</name>
+   <tag></tag>
+   <connectionProperties/>
+   <containsHeaders>true</containsHeaders>
+   <csvSeperator></csvSeperator>
+   <dataFileGUID>b9e9167f-5448-4233-af3a-c863cbd68d04</dataFileGUID>
+   <dataSourceUrl></dataSourceUrl>
+   <driver>InternalData</driver>
+   <data>Tokyo+CURA+Healthcare+Center true Medicare 12%2F01%2F2025 Test+Tokyo+Medicare</data>
+   <data>Tokyo+CURA+Healthcare+Center true Medicaid 12%2F01%2F2025 Test+Tokyo+Medicaid</data>
+   <data>Tokyo+CURA+Healthcare+Center false None 12%2F01%2F2025 Test+Tokyo+None</data>
+   <data>Seoul+CURA+Healthcare+Center false Medicare 12%2F01%2F2024 Test+Seoul+Medicare</data>
+   <data>Seoul+CURA+Healthcare+Center false Medicaid 12%2F01%2F2024 Test+Seoul+Medicaid</data>
+   <data>Seoul+CURA+Healthcare+Center true None 12%2F01%2F2024 Test+Seoul+None</data>
+   <data>Hongkong+CURA+Healthcare+Center false Medicare 12%2F01%2F2024 Test+Hongkong+Medicare</data>
+   <data>Hongkong+CURA+Healthcare+Center true Medicaid 12%2F01%2F2024 Test+Hongkong+Medicaid</data>
+   <data>Hongkong+CURA+Healthcare+Center true None 12%2F01%2F2024 Test+Hongkong+None</data>
+   <internalDataColumns>
+      <columnIndex>0</columnIndex>
+      <name>facility</name>
+      <size>9</size>
+   </internalDataColumns>
+   <internalDataColumns>
+      <columnIndex>1</columnIndex>
+      <name>readmission</name>
+      <size>9</size>
+   </internalDataColumns>
+   <internalDataColumns>
+      <columnIndex>2</columnIndex>
+      <name>program</name>
+      <size>9</size>
+   </internalDataColumns>
+   <internalDataColumns>
+      <columnIndex>3</columnIndex>
+      <name>date</name>
+      <size>9</size>
+   </internalDataColumns>
+   <internalDataColumns>
+      <columnIndex>4</columnIndex>
+      <name>comment</name>
+      <size>9</size>
+   </internalDataColumns>
+   <isInternalPath>false</isInternalPath>
+   <query></query>
+   <secureUserAccount>false</secureUserAccount>
+   <sheetName></sheetName>
+   <usingGlobalDBSetting>false</usingGlobalDBSetting>
+</DataFileEntity>
